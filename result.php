@@ -13,6 +13,7 @@
     <div class="text-center">
     <h2 class="mt-3">Password generata</h2><hr>
     <h3><?php echo $_SESSION['password']  ?></h3>
+    <p><a href="./index.php">Torna a generatore password</a></p>
     </div>
 </body>
 </html>
