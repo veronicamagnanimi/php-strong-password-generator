@@ -1,17 +1,4 @@
- <?php  
- if (isset($_GET['length'])) {
-
-   $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=';
-   $password = '';
-
-   for ($i = 0; $i < $_GET['length']; $i++) {
-    $random1 = rand(0, strlen($characters) -1);
-    $random2 = substr($characters, $random1, 1);
-    $password .= $random2;
-   }
-
- }
-   ?>
+ <?php include './functions.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +15,7 @@
     <form method="GET">
         <div class="d-flex flex-column align-items-center justify-content-center ">
             <label for="length">Inserisci i caratteri minimi</label>
-            <input type="number" name="length" id="length" min="5">
+            <input type="number" name="length" id="length" min="5" placeholder="Minimo 5 caratteri">
             <button class="btn btn-secondary mt-3">Genera</button>
         </div>
     </form>
