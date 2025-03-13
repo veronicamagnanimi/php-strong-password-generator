@@ -1,4 +1,14 @@
- <?php include './functions.php' ?>
+<?php
+require_once './functions.php'; 
+
+if ($password != '') {
+
+    session_start();
+    $_SESSION['password'] = $password;
+    header('Location: ./result.php');
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +30,16 @@
         </div>
     </form>
 
-   
-    <h3 class="text-center mt-3">Password generata: <?php echo $password ?></h3>
+   <div class="text-center">
+    <?php
+    if($password != "") {
+        ?>
+    <h3 class="text-center mt-3">Password generata di <?php echo $_GET['length']  ?> caratteri:</h3>
+    <h4><?php echo $password ?></h4>
+    <?php 
+    }
+    ?>
+    </div>
 </body>
 
 </html>

@@ -1,8 +1,10 @@
 <?php  
+
+$password = '';
+
  if (isset($_GET['length'])) {
 
    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=';
-   $password = '';
 
    for ($i = 0; $i < $_GET['length']; $i++) {
     $random1 = rand(0, strlen($characters) -1);
